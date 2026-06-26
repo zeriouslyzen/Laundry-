@@ -106,7 +106,7 @@ Draft documents in `/docs` require review by a California attorney before produc
 4. Add environment variables from `apps/web/.env.example` (at minimum `NEXT_PUBLIC_SITE_URL` with your Vercel URL)
 5. Deploy — preview mode works without Supabase; add Supabase keys when ready for live bookings
 
-**Note:** Hero videos live in `apps/web/public/videos/` (~150MB total). First deploy may take a few minutes.
+**Note:** Hero videos in `apps/web/public/videos/` are compressed 720p H.264 (~7MB total) for fast mobile loads.
 
 ## License
 
