@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-fog: #F8FAFC;
+  --color-mist: #EEF4FA;
+  --color-foam: #D6E6F5;
+  --color-sand: #F0EDE8;
+  --color-charcoal: #1A2B3C;
+  --color-slate: #4A6278;
+  --color-ocean: #2E5F8A;
+  --color-ocean-light: #4A8BB8;
+  --color-ocean-dark: #1E4466;
+  --color-sky: #7EB8E0;
+  --color-driftwood: #8B9AAB;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-display: var(--font-display), Georgia, serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+body {
+  background-color: var(--color-fog);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -8px rgba(46, 95, 138, 0.12);
+}
+
+@keyframes hero-tag-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-tag-enter {
+  animation: hero-tag-in 0.45s ease-out;
+}
+
+.hero-text-shadow {
+  text-shadow: 0 1px 2px rgba(26, 43, 60, 0.35), 0 8px 24px rgba(26, 43, 60, 0.25);
+}
